@@ -60,6 +60,15 @@ button {
   box-shadow: 0 0.35rem rgba(121, 121, 121, 0.6);
 }
 
+button:hover {
+  filter: brightness(110%);
+}
+
+button:active {
+  transform: translate(0, 0.35rem);
+  box-shadow: 0 0.2rem rgba(255, 255, 255, 0.6);
+}
+
 /* For tablets and smaller screens */
 @media only screen and (max-width: 900px) {
   html {
