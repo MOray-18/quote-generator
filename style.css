@@ -69,6 +69,14 @@ button:active {
   box-shadow: 0 0.2rem rgba(255, 255, 255, 0.6);
 }
 
+.twitter-button:hover {
+  color: #55acee;
+}
+
+.fa-twitter {
+  font-size: 1.4rem;
+}
+
 /* For tablets and smaller screens */
 @media only screen and (max-width: 900px) {
   html {
