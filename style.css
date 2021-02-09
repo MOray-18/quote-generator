@@ -47,6 +47,19 @@ body {
   justify-content: space-between;
 }
 
+button {
+  height: 2.5rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 0 0.35rem rgba(121, 121, 121, 0.6);
+}
+
 /* For tablets and smaller screens */
 @media only screen and (max-width: 900px) {
   html {
