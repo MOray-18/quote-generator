@@ -3,19 +3,28 @@ const quoteText = document.querySelector('#quote');
 const quoteAuthor = document.querySelector('#author');
 const twitterBtn = document.querySelector('.twitter-button');
 const newQuoteBtn = document.querySelector('.new-quote');
+const loader = document.querySelector('.loader');
+
+const toggleSpinner = function () {
+  loader.classList.toggle('hidden');
+  quoteContainer.classList.toggle('hidden');
+};
 
 // fetch quote from API
 const getQuote = async function () {
+  toggleSpinner();
   const proxyUrl = 'https://secure-headland-34160.herokuapp.com/';
   const apiUrl =
     'http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json';
   try {
     const response = await fetch(proxyUrl + apiUrl);
     const data = await response.json();
+    console.log(data);
 
     renderQuote(data);
+    toggleSpinner();
   } catch (error) {
-    // getQuote();
+    getQuote();
     console.error('unable to fetch quote', error);
   }
 };
